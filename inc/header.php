@@ -105,7 +105,7 @@ desired effect
 							  <i class="fa fa-bell-o"></i>
 							  <span class="label label-warning"><?= $notification ?> </span>
 							</a>
-						
+
 
 
 							<ul class="dropdown-menu notification-dropdown">
@@ -175,10 +175,6 @@ desired effect
   							<a class="btn" href="/secuv2/login.php" style="border: none;">Se connecter</a>
 						</li>
 						<?php endif; ?>
-						<!-- Control Sidebar Toggle Button -->
-						<li>
-							<a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-						</li>
 					</ul>
 				</div>
 			</nav>
@@ -188,7 +184,7 @@ desired effect
 
 			<!-- sidebar: style can be found in sidebar.less -->
 			<section class="sidebar">
-				
+
 				<?php if(isConnected()): ?>
 				<!-- Sidebar user panel (optional) -->
 				<div class="user-panel">
