@@ -16,63 +16,63 @@ $req = $bdd->query("SELECT username FROM user WHERE rank LIKE '%Mécanicien%'");
     </div>
     <!-- /.box-header -->
     <div class="box-body">
-	<div class="row">
-		<div class="col-sm-6">
-			<div class="form-group">
-				<label for="mecanicien">Mécanicien</label>
-				<select name="mecanicien" class="form-control" id="mecanicien">
-					<?php while($result = $req->fetch()){ ?>
-						<option value="<?php $nom=explode(" ", $result->username); echo $nom[1] ?>"><?= $result->username ?></option>
-					<?php }; ?>
-				</select>
-			</div>
-		</div>
-		<div class="col-sm-6">
-			<div class="form-group">
-				<label for="client">Client</label>
-				<input name="client" id="client" type="text" placeholder="Ex : Odor Noël" class="form-control">
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-6">
-			<div class="form-group">
-				<label for="adresse">Adresse</label>
-				<input name="adresse" id="adresse" type="text" placeholder="Ex : 19 Rue des pommiers | 1 place d'Athira" class="form-control">
-			</div>
-		</div>
-		<div class="col-sm-6">
-			<div class="form-group">
-				<label for="ville">Ville</label>
-				<input name="ville" id="ville" type="text" placeholder="Ex : 036 131 Kavala" class="form-control">
-			</div>
-		</div>
-	</div>
-	
-	<hr>
-	
-	<h4>Actions</h4>
-	<h6>Le prix TTC est calculé automatiquement</h6><br>
-	
-	<div id="row0" class="row">
-		<div class="col-sm-9">
-			<div class="form-group">
-				<label for="description">Description</label>
-				<input name="description0" id="description" type="text" placeholder="Ex : Pneu avant gauche | Nouveau démarreur" class="form-control">
-			</div>
-		</div>
-		<div class="col-sm-2">
-			<div class="form-group">
-				<label for="prix_ht">Prix HT €</label>
-                <input name="prix_ht0" id="prix_ht" type="text" placeholder="0000" class="form-control">
-			</div>
-		</div>	
-		<div class="col-sm-1">
-			<div class="form-group">
-				<a onclick="ajouterChamps()"><img src="/secuv2/dist/img/plus.png" width="32px" height="32px"></a>
-			</div>
-		</div>
-	</div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="mecanicien">Mécanicien</label>
+                    <select name="mecanicien" class="form-control" id="mecanicien">
+                        <?php while($result = $req->fetch()){ ?>
+                            <option value="<?php $nom=explode(" ", $result->username); echo $nom[1] ?>"><?= $result->username ?></option>
+                        <?php }; ?>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="client">Client</label>
+                    <input name="client" id="client" type="text" placeholder="Ex : Odor Noël" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="adresse">Adresse</label>
+                    <input name="adresse" id="adresse" type="text" placeholder="Ex : 19 Rue des pommiers | 1 place d'Athira" class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="ville">Ville</label>
+                    <input name="ville" id="ville" type="text" placeholder="Ex : 036 131 Kavala" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h4>Actions</h4>
+        <h6>Le prix TTC est calculé automatiquement</h6><br>
+
+        <div id="row0" class="row">
+            <div class="col-sm-9">
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input name="description0" id="description" type="text" placeholder="Ex : Pneu avant gauche | Nouveau démarreur" class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="prix_ht">Prix HT €</label>
+                    <input name="prix_ht0" id="prix_ht" type="text" placeholder="0000" class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <div class="form-group">
+                    <a onclick="ajouterChamps()"><img src="/secuv2/dist/img/plus.png" width="32px" height="32px"></a>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- /.box-body -->
     <div class="box-footer">
@@ -83,7 +83,6 @@ $req = $bdd->query("SELECT username FROM user WHERE rank LIKE '%Mécanicien%'");
 
 <?php
 require('../inc/footer.php');
-
 ?>
 
 <script type="text/javascript">
@@ -110,7 +109,7 @@ function ajouterChamps() {
 	if(i != 1){
 	original.lastElementChild.firstElementChild.firstElementChild.firstElementChild.setAttribute("hidden", "");
 	}
-	var ht = clone.firstElementChild.nextElementSibling.firstElementChild.lastElementChild.firstElementChild;
+	var ht = clone.firstElementChild.nextElementSibling.firstElementChild.lastElementChild;
 	var desc = clone.firstElementChild.firstElementChild.lastElementChild;
 	ht.name = "prix_ht" + i;
 	ht.value = "";
