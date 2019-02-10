@@ -1,8 +1,8 @@
 <?php
 
-	require("vendor/autoload.php");
-	require_once("bdd.php");
-	require_once("functions.php");
+	require("../vendor/autoload.php");
+	require_once("../inc/bdd.php");
+	require_once("../inc/functions.php");
 
 	if(isset($_POST) && !empty($_POST)){
 		$reqg = $bdd->query("SELECT adress FROM general");
@@ -40,10 +40,10 @@
 			session_start();
 			postToDiscord("Facture n° ".$id.". Nom du client : ".$client.". Lien : ".$resultg->adress."pdf_facture_meca/".$name);
 			$_SESSION['flash']['success'] = "La facture à bien été généré sous le nom : ".$name;
-			header("Location: facture.php");
+			header("Location: liste_facture.php");
 		}
 	}else{
 		$_SESSION['flash']['danger'] = "Vous ne pouvez pas accéder à cette page comme sa !";
-		header("Location: facture.php");
+		header("Location: liste_facture.php");
 	}
 ?>

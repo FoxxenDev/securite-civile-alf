@@ -1,16 +1,21 @@
 <?php
 
-require('header.php');
+require('../inc/header.php');
 
-$req = $bdd->query("SELECT username FROM user WHERE rank_meca_id > 0");
+$req = $bdd->query("SELECT username FROM user WHERE rank LIKE '%Mécanicien%'");
 ?>
 
 <h2>Facturer un client</h2>
 <br>
 <h4>Informations générales</h4>
 <br><br>
-
+<div class="box">
 <form method="post" action="facture_create.php">
+    <div class="box-header with-border">
+        <h3 class="box-title">Facturer un client</h3>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
 	<div class="row">
 		<div class="col-sm-6">
 			<div class="form-group">
@@ -44,7 +49,7 @@ $req = $bdd->query("SELECT username FROM user WHERE rank_meca_id > 0");
 		</div>
 	</div>
 	
-	<br><hr><br>
+	<hr>
 	
 	<h4>Actions</h4>
 	<h6>Le prix TTC est calculé automatiquement</h6><br>
@@ -58,25 +63,26 @@ $req = $bdd->query("SELECT username FROM user WHERE rank_meca_id > 0");
 		</div>
 		<div class="col-sm-2">
 			<div class="form-group">
-				<label for="prix_ht">Prix HT</label>
-				<div class="input-group">
-					<input name="prix_ht0" id="prix_ht" type="text" placeholder="0000" class="form-control" aria-describedby="basic-addon">
-					<span class="input-group-addon" id="basic-addon">€</span>
-				</div>
+				<label for="prix_ht">Prix HT €</label>
+                <input name="prix_ht0" id="prix_ht" type="text" placeholder="0000" class="form-control">
 			</div>
 		</div>	
 		<div class="col-sm-1">
 			<div class="form-group">
-				<a onclick="ajouterChamps()"><img src="img/plus.png" width="32px" height="32px"></a>
+				<a onclick="ajouterChamps()"><img src="/secuv2/dist/img/plus.png" width="32px" height="32px"></a>
 			</div>
 		</div>
 	</div>
-	
-	<button type="submit" id="submit" class="btn btn-success">Facturer</button>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer">
+        <button type="submit" id="submit" class="btn btn-success">Facturer</button>
+    </div>
 </form>
+</div>
 
 <?php
-require('footer.php');
+require('../inc/footer.php');
 
 ?>
 
@@ -99,7 +105,7 @@ function ajouterChamps() {
     var clone = original.cloneNode(true); // "deep" clone
     clone.id = "row" + ++i; // there can only be one element with an ID
 	tempSubmit = document.getElementById("submit");
-	tempButtonPlus = document.getElementById("plusbutton");	clone.lastElementChild.firstElementChild.firstElementChild.firstElementChild.src = "img/minus.png";
+	tempButtonPlus = document.getElementById("plusbutton");	clone.lastElementChild.firstElementChild.firstElementChild.firstElementChild.src = "/secuv2/dist/img/minus.png";
 	clone.lastElementChild.firstElementChild.firstElementChild.setAttribute("onclick", "retirerChamps()");
 	if(i != 1){
 	original.lastElementChild.firstElementChild.firstElementChild.firstElementChild.setAttribute("hidden", "");
