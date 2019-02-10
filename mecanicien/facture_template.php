@@ -2,7 +2,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Facture Sécurité Civile</title>
-		<link rel="stylesheet" href="<?= realpath('css/facture.css') ?>">
+		<link rel="stylesheet" href="<?= realpath('../dist/css/facture.css') ?>">
 		<link href="https://fonts.googleapis.com/css?family=Lato|Lobster|Open+Sans" rel="stylesheet">
 		<link rel="icon" href="img/logo.ico">	
 	</head>
@@ -10,7 +10,7 @@
 	<body>
 		<h1>Facture</h1>
 		
-		<img class="img_logo" src="<?= realpath("img/logo.png") ?>" width="100px" height="100px">
+		<img class="img_logo" src="<?= realpath("../dist/img/logo.png") ?>" width="100px" height="100px">
 		
 		<div class="address address-from">
 			<div class="address_label">De</div>

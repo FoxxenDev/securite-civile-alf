@@ -1,0 +1,138 @@
+/* CSS Document */
+html, body{
+	height: 100%;
+}
+
+body{
+	position: relative;
+	color: #222;
+	font-family: "Helvetica Neue", Arial, Verdana, sans-serif;
+	line-height: 1.4;
+	font-size: 1.2em;
+}
+
+h1{
+	font-size: 3em;
+	font-weight: bold;
+	margin: 0 0 70px 0;
+}
+
+.img_logo{
+	position: absolute;
+	top: -2px;
+	padding-left: 32%;
+}
+
+.address_label, .infos_label{
+	color: #555;
+	float: left;
+	width: 105px;
+	text-align: right;
+}
+
+.address_content, .infos_content{
+	margin-left: 115px;
+	border-left: 1px solid #CCCCCC;
+	padding-left: 10px;
+}
+
+.address-to{
+	position: absolute;
+	top: 7px;
+	right: 0;
+	width: 50%;
+}
+
+.address-from{
+	float: left;
+	width: 50%;
+}
+
+.infos{
+	float: right;
+	width: 50%;
+}
+
+.infos_content, .infos_label{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.cb{clear:both;}
+
+.items{
+	margin: 50px 0;
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
+	font-size: 1em;
+	line-height: 1.4;
+}
+
+.items tbody tr:nth-child(odd){
+	background: #f6f6f6;
+}
+
+.items th{
+	border-top: none;
+	text-align: left;
+	padding: 10px 3px;
+	font-size: 0.9em;
+}
+
+.items td{
+	padding: 10px;
+	border-top: 1px solid #CCCCCC;
+}
+
+.total{
+	background-color: transparent!important;
+	line-height: 1.6;
+}
+
+.total td{
+	border: none!important;
+	padding: 5px 10px;
+}
+
+.total-first td{
+	padding-top: 28px;
+}
+
+.total-big td{
+	padding-top: 10px;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+.total_label{
+	text-align: right;
+}
+
+.signature{
+	float: left;
+	font-size: 1.4em;
+}
+
+.chef, .mecanicien, .client{
+	text-align: center;
+	width: 33.333%;
+}
+
+.signature_label{	
+	font-size: 1.2em;
+}
+
+.signature_content{
+	font-family: 'Lobster', cursive;
+	padding-top: 20px;
+}
+
+.footer{
+	border-top: 1px solid #CCCCCC;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 1em 5px 0 5px;
+	text-align: center;
+}

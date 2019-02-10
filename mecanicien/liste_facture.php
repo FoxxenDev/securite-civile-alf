@@ -1,6 +1,9 @@
 <?php
+require_once("../inc/functions.php");
+require_once("../inc/bdd.php");
 
-require('../inc/header.php');
+if(!isRank("Mécanicien") && !isRank("Chef-Mécanicien") && !isRank("État-Major") && !isRank("Admin site")){header("Location: ../index.php");$_SESSION['flash']['danger'] = "Vous n'avez pas l'autorisation d'accéder à cette page !";exit();}
+
 
 if(isset($_GET) && !empty($_GET)){
 	if($_GET['action'] == "validate" && $_GET['id'] != null){
@@ -18,6 +21,8 @@ if(isset($_GET) && !empty($_GET)){
 		exit();		
 	}
 }
+
+require('../inc/header.php');
 
 $req = $bdd->query("SELECT * FROM facture_meca");
 ?>
@@ -42,7 +47,7 @@ $req = $bdd->query("SELECT * FROM facture_meca");
                         <th><?= $result->client ?></th>
                         <td><?= $result->name ?></td>
                         <td><?php if($result->validate == 0){echo "Non";}else{echo "Oui";} ?></td>
-                        <td><a href="pdf_facture_meca/<?= $result->name ?>">Voir</a><?php if($result->validate == 0 && getLevel(meca) == 4){?> | <a href="liste_facture.php?action=validate&id=<?= $result->id ?>"><img width="16px" height="16px" src="../img/check-mark.png" /></a> | <a href="liste_facture.php?action=supp&id=<?= $result->id ?>&name=<?= $result->name ?>"><img width="16px" height="16px" src="../img/remove-symbol.png" /></a><?php } ?></td>
+                        <td><a href="pdf_facture_meca/<?= $result->name ?>">Voir</a><?php if($result->validate == 0 && isRank("Chef-Mécanicien")){?> | <a href="liste_facture.php?action=validate&id=<?= $result->id ?>"><img width="16px" height="16px" src="../dist/img/check-mark.png" /></a> | <a href="liste_facture.php?action=supp&id=<?= $result->id ?>&name=<?= $result->name ?>"><img width="16px" height="16px" src="../dist/img/remove-symbol.png" /></a><?php } ?></td>
                     </tr>
                     <?php }; ?>
                 </tbody>

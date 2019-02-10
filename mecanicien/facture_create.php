@@ -7,7 +7,7 @@
 	if(isset($_POST) && !empty($_POST)){
 		$reqg = $bdd->query("SELECT adress FROM general");
 		$resultg = $reqg->fetch();
-		$req = $bdd->query("SELECT `id` FROM `pdf_facture_meca` ORDER BY `id` DESC LIMIT 1");
+		$req = $bdd->query("SELECT `id` FROM `facture_meca` ORDER BY `id` DESC LIMIT 1");
 		$result = $req->fetch();
 		$id_old = intval($result->id);
 		$id = $id_old + 1;
@@ -36,7 +36,7 @@
 		$name = str_replace(" ", "", $name);
 		//$pdf->send();
 		if($pdf->saveAs("/var/www/html/pdf_facture_meca/".$name)){
-			$bdd->prepare("INSERT INTO pdf_facture_meca (name, client) VALUES (?, ?)")->execute([$name, $client]);
+			$bdd->prepare("INSERT INTO facture_meca (name, client) VALUES (?, ?)")->execute([$name, $client]);
 			session_start();
 			postToDiscord("Facture n° ".$id.". Nom du client : ".$client.". Lien : ".$resultg->adress."pdf_facture_meca/".$name);
 			$_SESSION['flash']['success'] = "La facture à bien été généré sous le nom : ".$name;
