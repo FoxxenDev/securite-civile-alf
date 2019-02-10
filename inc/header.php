@@ -251,7 +251,7 @@ desired effect
 						<ul class="treeview-menu">
 							<li><a href="#"><i class="fa fa-user"></i><span style="margin-left: 10px;">Effectif</span></a>
 							</li>
-							<li><a href="/secuv2/mecanicien/facture.php"><i class="fa fa-file-text"></i><span style="margin-left: 10px;">Factures</span></a>
+							<li><a href="/secuv2/mecanicien/liste_facture.php"><i class="fa fa-file-text"></i><span style="margin-left: 10px;">Factures</span></a>
 							<li><a href="#"><i class="fa fa-file-text"></i><span style="margin-left: 10px;">Document Technique</span></a>
 							</li>
 						</ul>
