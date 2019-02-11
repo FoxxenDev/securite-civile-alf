@@ -10,7 +10,7 @@
       <strong>Version</strong> 1.0
 	</div>
     <!-- Default to the left -->
-    <strong>&nbsp;</strong>
+    <strong>&copy; Taylor williams</strong> - Design John Deamers <a href="https://www.altislife-france.com/">AltisLife-France.com</a>
   </footer>
 </div>
 <!-- ./wrapper -->
