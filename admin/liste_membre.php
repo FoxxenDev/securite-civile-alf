@@ -124,7 +124,7 @@ $req = $bdd->query( "SELECT user.*, rank_sc.*, rank_meca.*, rank_sru.*, advert.t
 							<th>
 								<?= $result->attribution ?>
 							</th>
-							<?php if($date_now >= $date_start_advert && $date_now <= $date_end_advert && $result->type != "Dégrade" && $result->type != "Viré"): ?>
+							<?php if($date_now >= $date_start_advert && $date_now <= $date_end_advert && $result->type != "Viré"): ?>
 							<th style="background-color: <?= $result->color ?>;">
 								<?= $result->type ?>
 							</th>

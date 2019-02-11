@@ -283,7 +283,7 @@ desired effect
 							</li>
 						</ul>
 					</li>
-					<li><a href="/secuv2/debug.php"><i class="fa fa-gears"></i> <span>Debug</span></a>
+					<li><a href="/secuv2/debug.php"><i class="fa fa-gears"></i> <span>Debug</span></a></li>
 				</ul>
 				<!-- /.sidebar-menu -->
 			</section>
