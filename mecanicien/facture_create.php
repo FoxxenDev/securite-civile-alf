@@ -12,6 +12,7 @@
 		$id_old = intval($result->id);
 		$id = $id_old + 1;
 		$number = "";
+
 		if($id < 10){
 			$number = "00".$id;
 		}elseif($id < 100 && $id >= 10){

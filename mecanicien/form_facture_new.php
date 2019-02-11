@@ -103,21 +103,21 @@ function ajouterChamps() {
     var original = document.getElementById('row' + i);
     var clone = original.cloneNode(true); // "deep" clone
     clone.id = "row" + ++i; // there can only be one element with an ID
-	tempSubmit = document.getElementById("submit");
-	tempButtonPlus = document.getElementById("plusbutton");	clone.lastElementChild.firstElementChild.firstElementChild.firstElementChild.src = "/secuv2/dist/img/minus.png";
-	clone.lastElementChild.firstElementChild.firstElementChild.setAttribute("onclick", "retirerChamps()");
-	if(i != 1){
-	original.lastElementChild.firstElementChild.firstElementChild.firstElementChild.setAttribute("hidden", "");
-	}
-	var ht = clone.firstElementChild.nextElementSibling.firstElementChild.lastElementChild;
-	var desc = clone.firstElementChild.firstElementChild.lastElementChild;
-	ht.name = "prix_ht" + i;
-	ht.value = "";
-	desc.name = "description" + i;
-	desc.value = "";
+    tempSubmit = document.getElementById("submit");
+    tempButtonPlus = document.getElementById("plusbutton");
+    clone.lastElementChild.firstElementChild.firstElementChild.firstElementChild.src = "/secuv2/dist/img/minus.png";
+    clone.lastElementChild.firstElementChild.firstElementChild.setAttribute("onclick", "retirerChamps()");
+    if (i != 1) {
+        original.lastElementChild.firstElementChild.firstElementChild.firstElementChild.setAttribute("hidden", "");
+    }
+    var ht = clone.firstElementChild.nextElementSibling.firstElementChild.lastElementChild;
+    var desc = clone.firstElementChild.firstElementChild.lastElementChild;
+    ht.name = "prix_ht" + i;
+    ht.value = "";
+    desc.name = "description" + i;
+    desc.value = "";
     original.parentNode.appendChild(clone);
-	original.parentNode.appendChild(tempSubmit);
-	
+    original.parentNode.appendChild(tempSubmit);
+
 }
-	
 </script>

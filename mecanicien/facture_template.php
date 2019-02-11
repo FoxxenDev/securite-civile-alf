@@ -93,6 +93,5 @@
 	<div class="footer">
 			Sécurité Civile - Service gouvernemental
 		</div>
-		
 	</body>
 </html>

@@ -53,7 +53,7 @@ $req = $bdd->query("SELECT * FROM facture_meca");
                 </tbody>
             </table>
         </div>
-            <!-- /.col -->
+        <!-- /.col -->
     </div>
     <!-- /.row -->
 <a href="form_facture_new.php" class="btn btn-primary">Facturer un client</a>
