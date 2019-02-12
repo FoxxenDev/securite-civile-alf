@@ -90,7 +90,7 @@ function reconnectFromCookie(){
                 $user->rank = $rankValue;
 
                 $_SESSION["auth"] = $user;
-                setcookie("remember", $rememberToken, time() + 60 * 60 * 24 * 7, "/", "securite-civile-alf.tk");
+                setcookie("remember", $rememberToken, time() + 60 * 60 * 24 * 7);
             }else{
                 setcookie("remember", NULL, -1);
             }
