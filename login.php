@@ -28,7 +28,7 @@ if ( !empty( $_POST ) && !empty( $_POST[ 'username' ] ) && !empty( $_POST[ 'pass
 			if(isset($_POST["remember"]) && $_POST["remember"] == 1){
 			    $token = token(150);
 			    $bdd->prepare("UPDATE user SET remember_token = ? WHERE id = ?")->execute([$token, $user->id]);
-			    setcookie("remember", $user->id."==".$token . sha1($user->id . "scalf"), time() + 60 * 60 * 24 * 7);
+			    setcookie("remember", $user->id."==".$token . sha1($user->id . "scalf"), time() + 60 * 60 * 24 * 7, "/", "securite-civile-alf.tk");
             }
 
 			header( "Location: /secuv2/index.php" );
