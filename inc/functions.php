@@ -68,13 +68,13 @@ function token($lenght){
 }
 
 function reconnectFromCookie(){
-    if(isset($_COOKIE["remember"]) && ! isConnected()){
+    if(isset($_COOKIE["remember"]) && !isConnected()){
         require_once ("bdd.php");
         global $bdd;
         $rememberToken = $_COOKIE["remember"];
         $parts = explode("==", $rememberToken);
         $user_id = $parts[0];
-        $req = $bdd->prepare("SELECT user.id, user.password, user.username, user.email, user.remember_token, user.rank, user.register_at, rank_sc.rank_sc_name, rank_meca.rank_meca_name, rank_meca.rank_meca_level, rank_sru.rank_sru_name, rank_sru.rank_sru_level FROM user LEFT JOIN rank_sc ON user.rank_sc_id=rank_sc.rank_sc_id LEFT JOIN rank_meca ON user.rank_meca_id=rank_meca.rank_meca_id LEFT JOIN rank_sru ON user.rank_sru_id=rank_sru.rank_sru_id WHERE id = ?");
+        $req = $bdd->prepare("SELECT user.id, user.password, user.username, user.email, user.avatar, user.remember_token, user.rank, user.register_at, rank_sc.rank_sc_name, rank_meca.rank_meca_name, rank_meca.rank_meca_level, rank_sru.rank_sru_name, rank_sru.rank_sru_level FROM user LEFT JOIN rank_sc ON user.rank_sc_id=rank_sc.rank_sc_id LEFT JOIN rank_meca ON user.rank_meca_id=rank_meca.rank_meca_id LEFT JOIN rank_sru ON user.rank_sru_id=rank_sru.rank_sru_id WHERE id = ?");
         $req->execute([$user_id]);
         $user = $req->fetch();
         if($user){
