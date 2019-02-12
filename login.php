@@ -6,7 +6,7 @@ if(session_status() === PHP_SESSION_NONE){session_start();}
 
 if ( !empty( $_POST ) && !empty( $_POST[ 'username' ] ) && !empty( $_POST[ 'password' ] ) ) {
 
-	$req = $bdd->prepare( "SELECT user.id, user.password, user.username, user.email, user.rank, user.register_at, rank_sc.rank_sc_name, rank_meca.rank_meca_name, rank_meca.rank_meca_level, rank_sru.rank_sru_name, rank_sru.rank_sru_level FROM user LEFT JOIN rank_sc ON user.rank_sc_id=rank_sc.rank_sc_id LEFT JOIN rank_meca ON user.rank_meca_id=rank_meca.rank_meca_id LEFT JOIN rank_sru ON user.rank_sru_id=rank_sru.rank_sru_id WHERE (user.username = :username OR user.email = :username)" );
+	$req = $bdd->prepare( "SELECT user.id, user.password, user.username, user.email, user.avatar, user.rank, user.register_at, rank_sc.rank_sc_name, rank_meca.rank_meca_name, rank_meca.rank_meca_level, rank_sru.rank_sru_name, rank_sru.rank_sru_level FROM user LEFT JOIN rank_sc ON user.rank_sc_id=rank_sc.rank_sc_id LEFT JOIN rank_meca ON user.rank_meca_id=rank_meca.rank_meca_id LEFT JOIN rank_sru ON user.rank_sru_id=rank_sru.rank_sru_id WHERE (user.username = :username OR user.email = :username)" );
 	$req->execute( [ 'username' => $_POST[ 'username' ] ] );
 	$user = $req->fetch();
 	$userexist = $req->rowCount();
