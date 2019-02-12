@@ -62,7 +62,6 @@ $user = $req->fetch();
 							<option <?php if($user->formation_pilote == "Aucune:#ffffff"){echo "selected";} ?> value="Aucune:#ffffff">Aucune</option>
 							<option style="background-color: #cc4125;" <?php if($user->formation_pilote == "En attente:#cc4125"){echo "selected";} ?> value="En attente:#cc4125">En attente</option>
 							<option style="background-color: #6d9eeb;" <?php if($user->formation_pilote == "Validée:#6d9eeb"){echo "selected";} ?> value="Validée:#6d9eeb">Validée</option>
-							<option style="background-color: #674ea7;" <?php if($user->formation_pilote == "Avancée:#674ea7"){echo "selected";} ?> value="Avancée:#674ea7">Avancée</option>
 							<option style="background-color: #38761d;" <?php if($user->formation_pilote == "Maîtrisée:#38761d"){echo "selected";} ?> value="Maîtrisée:#38761d">Maîtrisée</option>
 							<option style="background-color: #0b5394;" <?php if($user->formation_pilote == "Formateur:#0b5394"){echo "selected";} ?> value="Formateur:#0b5394">Formateur</option>
 						</select>
