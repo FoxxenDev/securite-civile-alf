@@ -1,7 +1,8 @@
 <?php
 
 require_once( 'inc/bdd.php' );
-session_start();
+require_once( 'inc/functions.php' );
+if(session_status() === PHP_SESSION_NONE){session_start();}
 
 if ( !empty( $_POST ) && !empty( $_POST[ 'username' ] ) && !empty( $_POST[ 'password' ] ) ) {
 
@@ -23,7 +24,13 @@ if ( !empty( $_POST ) && !empty( $_POST[ 'username' ] ) && !empty( $_POST[ 'pass
 			
 			$_SESSION[ 'auth' ] = $user;
 			$_SESSION[ 'flash' ][ 'success' ] = "Vous êtes maintenant connecté";
-			
+
+			if(isset($_POST["remember"]) && $_POST["remember"] == 1){
+			    $token = token(150);
+			    $bdd->prepare("UPDATE user SET remember_token = ? WHERE id = ?")->execute([$token, $user->id]);
+			    setcookie("remember", $user->id."==".$token . sha1($user->id . "scalf"), time() + 60 * 60 * 24 * 7);
+            }
+
 			header( "Location: /secuv2/index.php" );
 			exit();
 
@@ -110,9 +117,9 @@ if ( !empty( $_POST ) && !empty( $_POST[ 'username' ] ) && !empty( $_POST[ 'pass
 					<div class="col-xs-8">
 						<div class="checkbox icheck">
 							<label>
-								<input type="checkbox"> Se souvenir de moi
+								<input type="checkbox" name="remember" value="1"> Se souvenir de moi
 							</label>
-						
+
 						</div>
 					</div>
 					<!-- /.col -->

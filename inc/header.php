@@ -2,6 +2,7 @@
 if(session_status() === PHP_SESSION_NONE){session_start();}
 require_once( "bdd.php" );
 require_once( "functions.php" );
+reconnectFromCookie();
 $idSess = 1;
 
 $men = array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
