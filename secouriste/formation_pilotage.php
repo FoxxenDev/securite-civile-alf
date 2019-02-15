@@ -3,8 +3,7 @@
 <h2 style="color: #ff0000"><b>Règlement et information de la formation pilotage:</b></h2>
 <p>
 	<li>Le grade <b style="color: #ff0000">MINIMUM</b> pour passer la formation hélicoptère est caporal</li>
-	<li>Les formateurs hélicos sont Tylor Williams et Pitivier Christophe</li>
-	<li>Les personnes qui ont une formation avancée sont prioritaire sur les personnes ayant une formation de base</li>
+	<li>Les formateurs hélicos sont Tylor Williams, Pitivier Christophe et Octavia Agreste</li>
 	<li>Pour la formation de base, vous aurez le droit de crash/casser l'hélicoptère uniquement deux fois</li>
 	<li>Les examens sont passés uniquement sur l'EC-135, mais valide également le hummingbird</li>
 	<li>Le rase-motte au-dessus d'une ville est interdit tant que vous n'êtes pas en intervention</li>
