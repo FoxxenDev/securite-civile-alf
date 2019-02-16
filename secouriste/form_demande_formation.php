@@ -43,7 +43,8 @@ require("../inc/header.php");
 					<option selected disabled>(Sélectionnez une formation)</option>
 					<option value="Formation Mécanicien">Formation Mécanicien</option>
 					<option value="Formation S.R.U">Formation S.R.U</option>
-					<option value="Formation pilotage">Formation pilotage</option>
+					<option value="Formation pilotage de base">Formation pilotage de base</option>
+					<option value="Formation pilotage maîtrisée">Formation pilotage de maîtrisée</option>
 					<option value="Formation Commandement">Formation Commandement (CODIS)</option>
 					<option value="Formation Formateur">Formation Formateur</option>
 				</select>
