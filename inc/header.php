@@ -232,6 +232,8 @@ desired effect
 							</span>
 						</a>
 						<ul class="treeview-menu">
+							<li><a href="/secuv2/secouriste/liste_formation.php"><i class="fa fa-list-ul"></i> Liste des formations</a>
+							</li>
 							<li><a href="/secuv2/secouriste/form_demande_formation.php"><i class="fa fa-bookmark"></i> Demande de formation</a>
 							</li>
 							<li><a href="/secuv2/secouriste/liste_demande_formation.php"><i class="fa fa-list-ul"></i> Liste des demandes</a>
@@ -249,7 +251,7 @@ desired effect
 							</span>
 						</a>
 						<ul class="treeview-menu">
-							<li><a href="#"><i class="fa fa-user"></i><span style="margin-left: 10px;">Effectif</span></a></li>
+							<li><a href="/secuv2/mecanicien/liste_mecanicien.php"><i class="fa fa-user"></i><span style="margin-left: 10px;">Effectif</span></a></li>
 							<li><a href="/secuv2/mecanicien/liste_facture.php"><i class="fa fa-file-text"></i><span style="margin-left: 10px;">Factures</span></a>
 							<li><a href="#"><i class="fa fa-file-text"></i><span style="margin-left: 10px;">Document Technique</span></a>
 							</li>
@@ -262,7 +264,7 @@ desired effect
 							</span>
 						</a>
 						<ul class="treeview-menu">
-							<li><a href="#"><i class="fa fa-user"></i>Effectif</a>
+							<li><a href="/secuv2/sru/liste_sru.php"><i class="fa fa-user"></i>Effectif</a>
 							</li>
 						</ul>
 					</li>
