@@ -133,8 +133,11 @@ $user->rank = $rankValue;
 						<select name="attribution" class="form-control" id="attribution">
 							<option <?php if($user->attribution == ""){echo "selected";} ?> value="">Aucun</option>
 							<option <?php if($user->attribution == "Formateur"){echo "selected";} ?> value="Formateur">Formateur</option>
+							<option <?php if($user->attribution == "Formatrice"){echo "selected";} ?> value="Formatrice">Formatrice</option>
 							<option <?php if($user->attribution == "Recruteur"){echo "selected";} ?> value="Recruteur">Recruteur</option>
+							<option <?php if($user->attribution == "Recrutrice"){echo "selected";} ?> value="Recrutrice">Recrutrice</option>
 							<option <?php if($user->attribution == "Formateur/Recruteur"){echo "selected";} ?> value="Formateur/Recruteur">Formateur/Recruteur</option>
+							<option <?php if($user->attribution == "Formatrice/Recrutrice"){echo "selected";} ?> value="Formatrice/Recrutrice">Formatrice/Recrutrice</option>
 						</select>
 					</div>
 				</div>
