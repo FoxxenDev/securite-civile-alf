@@ -13,7 +13,6 @@ if ( !isset( $_GET[ 'id' ] ) || empty( $_GET[ "id" ] ) ) {
 	$_SESSION[ 'flash' ]->danger = "Impossible de modifier les informations de ce membre";
 	header( "Location: liste_membre.php" );
 	exit();
-
 }
 
 if ( isset( $_POST ) && !empty( $_POST ) ) {
@@ -135,9 +134,9 @@ $user->rank = $rankValue;
 							<option <?php if($user->attribution == "Formateur"){echo "selected";} ?> value="Formateur">Formateur</option>
 							<option <?php if($user->attribution == "Formatrice"){echo "selected";} ?> value="Formatrice">Formatrice</option>
 							<option <?php if($user->attribution == "Recruteur"){echo "selected";} ?> value="Recruteur">Recruteur</option>
-							<option <?php if($user->attribution == "Recrutrice"){echo "selected";} ?> value="Recrutrice">Recrutrice</option>
+							<option <?php if($user->attribution == "Recruteuse"){echo "selected";} ?> value="Recruteuse">Recruteuse</option>
 							<option <?php if($user->attribution == "Formateur/Recruteur"){echo "selected";} ?> value="Formateur/Recruteur">Formateur/Recruteur</option>
-							<option <?php if($user->attribution == "Formatrice/Recrutrice"){echo "selected";} ?> value="Formatrice/Recrutrice">Formatrice/Recrutrice</option>
+							<option <?php if($user->attribution == "Formatrice/Recruteuse"){echo "selected";} ?> value="Formatrice/Recruteuse">Formatrice/Recruteuse</option>
 						</select>
 					</div>
 				</div>
